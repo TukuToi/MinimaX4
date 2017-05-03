@@ -1,8 +1,8 @@
-# MinimaX1
+# MinimaX4
 
 ## Description
 
-MinimaX1 is the minimalistic version of the MiniMax Theme series. 
+MinimaX4 is the minimalistic version of the MiniMax Theme series. 
 It includes a dynamic integration of Toolset Plugins. It integrates Bootstrap. 
 The rest is free to customize.
 

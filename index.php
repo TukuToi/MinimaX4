@@ -6,7 +6,7 @@
  * MinimaX has no other template files. Everything is handled here.
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 
 /** 
@@ -21,7 +21,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/page-template-files/page-templates/
  * 
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 
 if ( defined( 'WPDDL_VERSION' ) && is_ddlayout_assigned()) { 
@@ -39,7 +39,7 @@ if ( defined( 'WPDDL_VERSION' ) && is_ddlayout_assigned()) {
 	 *
 	 * @link https://wp-types.com/documentation/user-guides/layouts-theme-integration/
 	 * 
-	 * @since MinimaX1 1.0.0
+	 * @since MinimaX4 1.0.0
 	 */
 
 	get_header( ); //Call 'header-layouts' if you plan to style the header differntly
@@ -55,7 +55,7 @@ if ( defined( 'WPDDL_VERSION' ) && is_ddlayout_assigned()) {
  * 
  * @link https://codex.wordpress.org/The_Loop
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 else {
 	get_header();?>
@@ -76,7 +76,7 @@ else {
 				 		 * If Toolset Views is active load only the_content().
 				 		 * Views replaces the_content() with its Content Templates.
 						 * Views stores the assigned Contnet Template in a hidden _views_template Field
-			 			 * We do load only the above "MinimaX1 container".
+			 			 * We do load only the above "MinimaX4 container".
 				 		 * We use is_wpv_content_template_assigned() that is defined in Views
 				 		 * But we could also simply get_post_meta _views_template > 0
 				 		 * Views does NOT check if is_home or is_front_page() so we need still to 
@@ -90,7 +90,7 @@ else {
 						 * @todo Juan should add check for is_home() and is_front_page to the Views API
 						 *       then we can remove the redundant check below.
 						 * 
-						 * @since MinimaX1 1.0.0
+						 * @since MinimaX4 1.0.0
 						 */
 						if (defined('WPV_VERSION') && ((is_wpv_content_template_assigned() == true) OR (get_post_meta($post->ID, '_views_template', true) > 0))) {
 							the_content();
@@ -102,7 +102,7 @@ else {
 			 			 * 
 			 			 * @link https://codex.wordpress.org/Function_Reference/the_title
 				 		 *
-				 		 * @since MinimaX1 1.0.0
+				 		 * @since MinimaX4 1.0.0
 						 */
 						else {
 							/** 
@@ -126,7 +126,7 @@ else {
 							        	<?php echo paginate_links();
 							        }
 							        if (is_search() ) {?>
-							        	<h1><?php _e('Search Results for: ', 'MinimaX1');echo get_search_query();?></h1>
+							        	<h1><?php _e('Search Results for: ', 'MinimaX4');echo get_search_query();?></h1>
 							        	<?php echo paginate_links();
 							        }?>
 							    </div><!--#row-->
@@ -166,18 +166,18 @@ else {
 					if (is_search() ) {?>
 						<div class="row">
 						    <div class="col-md-12">
-						    	<h1><?php _e('Search Results for: ', 'MinimaX1');echo get_search_query();?></h1>
+						    	<h1><?php _e('Search Results for: ', 'MinimaX4');echo get_search_query();?></h1>
 						    </div>
 						</div><?php
 					}?>
 					<div class="row">
 						<div class="col-md-12">
-							<h2><?php _e('No Posts', 'MinimaX1');?></h2>
+							<h2><?php _e('No Posts', 'MinimaX4');?></h2>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<p><?php _e('No Contents', 'MinimaX1');?></p>
+							<p><?php _e('No Contents', 'MinimaX4');?></p>
 						</div>
 					</div><?php
 				}?>

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @since MinimaX1 1.0.1
+ * @since MinimaX4 1.0.1
  */
 
 if ( defined( 'WPDDL_VERSION' ) && is_ddlayout_assigned()) { 
@@ -19,7 +19,7 @@ if ( defined( 'WPDDL_VERSION' ) && is_ddlayout_assigned()) {
 	 *
 	 * @link https://wp-types.com/documentation/user-guides/layouts-theme-integration/
 	 * 
-	 * @since MinimaX1 1.0.0
+	 * @since MinimaX4 1.0.0
 	 */
 
 	get_header( ); //Call 'header-layouts' if you plan to style the header differntly
@@ -39,8 +39,8 @@ get_header(); ?>
 			else {?>
 				<div class="col-md-12"><?php
 			}?>
-					<h1 class="text-center"><?php _e( 'Error 404', 'MinimaX1' ); ?></h1>
-					<a href="<?php esc_url( home_url( '/' ) )?>"><h3 class="text-center"><?php _e('Go Home', 'MinimaX1');?></h3></a>
+					<h1 class="text-center"><?php _e( 'Error 404', 'MinimaX4' ); ?></h1>
+					<a href="<?php esc_url( home_url( '/' ) )?>"><h3 class="text-center"><?php _e('Go Home', 'MinimaX4');?></h3></a>
 				</div>
 			<?php get_sidebar();?>
 		</div>

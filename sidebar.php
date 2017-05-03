@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @since MinimaX1 1.0.1
+ * @since MinimaX4 1.0.1
  */
 
 /** 

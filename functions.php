@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Theme_Development
  * @link https://codex.wordpress.org/Functions_File_Explained
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 
 /**
@@ -17,10 +17,10 @@
  *
  * @link https://codex.wordpress.org/Plugin_API/Action_Reference/after_setup_theme
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
-if ( ! function_exists( 'MinimaX1_setup' ) ) {
-	function MinimaX1_setup() {
+if ( ! function_exists( 'MinimaX4_setup' ) ) {
+	function MinimaX4_setup() {
 
 		/**
 		 * Let WordPress manage the document title.
@@ -31,7 +31,7 @@ if ( ! function_exists( 'MinimaX1_setup' ) ) {
 		 * @link https://developer.wordpress.org/reference/functions/add_theme_support/
 		 * @link https://codex.wordpress.org/Title_Tag
 		 *
-		 * @since MinimaX1 1.0.0
+		 * @since MinimaX4 1.0.0
 		 */
 		add_theme_support( 'title-tag' );
 
@@ -40,7 +40,7 @@ if ( ! function_exists( 'MinimaX1_setup' ) ) {
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 *
-		 * @since MinimaX1 1.0.0
+		 * @since MinimaX4 1.0.0
 		 */
 		add_theme_support( 'post-thumbnails' );
 
@@ -49,10 +49,10 @@ if ( ! function_exists( 'MinimaX1_setup' ) ) {
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/wp_nav_menu/
 		 *
-		 * @since MinimaX1 1.0.0
+		 * @since MinimaX4 1.0.0
 		 */
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary Menu', 'MinimaX1' )
+			'primary' => esc_html__( 'Primary Menu', 'MinimaX4' )
 		) );
 
 		/**
@@ -60,7 +60,7 @@ if ( ! function_exists( 'MinimaX1_setup' ) ) {
 	 	 *
 	 	 * @link http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
 	 	 *
-	 	 * @since MinimaX1 1.0.0
+	 	 * @since MinimaX4 1.0.0
 	 	 */
 	    add_theme_support( 'woocommerce' );
 
@@ -69,19 +69,19 @@ if ( ! function_exists( 'MinimaX1_setup' ) ) {
 	     *
 	     * @link https://wp-types.com/documentation/user-guides/layouts-theme-integration/ > Telling Layouts your theme is integrated
 	     **/
-		add_filter( 'ddl-is_integrated_theme', 'MinimaX1_is_integrated_with_layouts' ); 
+		add_filter( 'ddl-is_integrated_theme', 'MinimaX4_is_integrated_with_layouts' ); 
 	}
 }
-add_action( 'after_setup_theme', 'MinimaX1_setup' );
+add_action( 'after_setup_theme', 'MinimaX4_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function MinimaX1_widgets_init() {
+function MinimaX4_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'MinimaX1' ),
+		'name'          => esc_html__( 'Sidebar', 'MinimaX4' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -90,14 +90,14 @@ function MinimaX1_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'MinimaX1_widgets_init' );
+add_action( 'widgets_init', 'MinimaX4_widgets_init' );
 
 /**
  * Integrate WooCommerce.
  *
  * @link http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 	/* 
 	 * First unhook the WooCommerce wrappers
@@ -117,7 +117,7 @@ add_action( 'widgets_init', 'MinimaX1_widgets_init' );
  *
  * @link https://wp-types.com/documentation/user-guides/layouts-theme-integration/ > Telling Layouts your theme is integrated
  */
-function MinimaX1_is_integrated_with_layouts() {
+function MinimaX4_is_integrated_with_layouts() {
     return true;
 }
 
@@ -128,41 +128,54 @@ function MinimaX1_is_integrated_with_layouts() {
  *
  * @since MiniMax 1.0.0
  */
-function MinimaX1_styles() {        
+function MinimaX4_styles() {        
 	//Enqueue Bootstrap CSS
-	wp_enqueue_style( 'MinimaX1-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', '3.3.6', 'all' );
-        
-	/**
-	 * @todo Enqueue FontAwesome
-     *
-     */
-	//wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.2.0', 'all' );
+	wp_enqueue_style( 'MinimaX4-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', '4.0.0-alpha.6', 'all' );
 
-	//Enqueue the MinimaX1 Main Style Sheet
+	//Enqueue FontAwesome
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/FontAwesome/font-awesome.min.css', array(), '4.7.0', 'all' );
+
+	//Enqueue MaterialDesign CSS
+	wp_enqueue_style( 'MinimaX4-MaterialDesign-css', get_template_directory_uri() . '/css/mdb.css', '4.3.2', 'all' );
+
+	//Enqueue the MinimaX4 Main Style Sheet
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
-add_action( 'wp_enqueue_scripts', 'MinimaX1_styles' );
+add_action( 'wp_enqueue_scripts', 'MinimaX4_styles' );
 
 /** 
  * Enqueue JS Scripts
  *
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
-function MinimaX1_scripts() {
-	//Enqueue Bootstrap JS and add jQuery Dependency
-	wp_enqueue_script('MinimaX1-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6', true);
+function MinimaX4_scripts() {
+
+	//Deregister native WordPress jQuery version script
+	wp_deregister_script('jquery');
+
+	//Register our own version (2.2.3) for later usage
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js', false, '2.0.s');
+
+    //Enqueue Tether JS and add jQuery Dependency
+    wp_enqueue_script('MinimaX4-tether-js', get_template_directory_uri() . '/js/tether.min.js', array('jquery'), '1.2.0', false);
+
+	//Enqueue GoldBootstrap JS and add jQuery Dependency
+	wp_enqueue_script('MinimaX4-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.6', false);
+
+	//Enqueue MaterialDesign JS and add jQuery Dependency
+	wp_enqueue_script('MinimaX4-MaterialDesign-js', get_template_directory_uri() . '/js/mdb.min.js', array('jquery'), '4.3.2', true);
 }
-add_action( 'wp_enqueue_scripts', 'MinimaX1_scripts' );
+add_action( 'wp_enqueue_scripts', 'MinimaX4_scripts' );
 
 /** 
- * Require Function for MinimaX1 Classes path 
+ * Require Function for MinimaX4 Classes path 
  *
  * @link http://php.net/manual/en/function.require-once.php
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
-function MinimaX1_require_once($MinimaX1_class) {
-    require_once(__DIR__ . '/' .'MinimaX1-classes' . '/' . $MinimaX1_class . '.class.php');
+function MinimaX4_require_once($MinimaX4_class) {
+    require_once(__DIR__ . '/' .'MinimaX4-classes' . '/' . $MinimaX4_class . '.class.php');
 }

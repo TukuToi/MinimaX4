@@ -6,7 +6,7 @@
  * 
  * @link http://getbootstrap.com/components/
  *
- * @since MinimaX1 1.0.0
+ * @since MinimaX4 1.0.0
  */
 ?>
 <nav role="navigation">
@@ -28,7 +28,7 @@
                 /**
                  * Include the Navwalker Class
                  */
-                MinimaX1_require_once('wp_bootstrap_navwalker');
+                MinimaX4_require_once('wp_bootstrap_navwalker');
 
                 $args = array(
                     'theme_location'    => 'primary',

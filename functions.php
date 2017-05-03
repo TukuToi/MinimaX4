@@ -130,18 +130,15 @@ function MinimaX4_is_integrated_with_layouts() {
  */
 function MinimaX4_styles() {        
 	//Enqueue Bootstrap CSS
-	wp_enqueue_style( 'UndenkTheme-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', '4.0.0-alpha.6', 'all' );
+	wp_enqueue_style( 'MinimaX4-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', '4.0.0-alpha.6', 'all' );
 
-	/**
-	 * Enqueue FontAwesome
-     *
-     */
+	//Enqueue FontAwesome
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/FontAwesome/font-awesome.min.css', array(), '4.7.0', 'all' );
 
 	//Enqueue MaterialDesign CSS
-	wp_enqueue_style( 'UndenkTheme-MaterialDesign-css', get_template_directory_uri() . '/css/mdb.css', '4.3.2', 'all' );
+	wp_enqueue_style( 'MinimaX4-MaterialDesign-css', get_template_directory_uri() . '/css/mdb.css', '4.3.2', 'all' );
 
-	//Enqueue the UndenkTheme Main Style Sheet
+	//Enqueue the MinimaX4 Main Style Sheet
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'MinimaX4_styles' );
@@ -154,7 +151,7 @@ add_action( 'wp_enqueue_scripts', 'MinimaX4_styles' );
  * @since MinimaX4 1.0.0
  */
 function MinimaX4_scripts() {
-	//Enqueue Bootstrap JS and add jQuery Dependency
+
 	//Deregister native WordPress jQuery version script
 	wp_deregister_script('jquery');
 
@@ -162,13 +159,13 @@ function MinimaX4_scripts() {
     wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js', false, '2.0.s');
 
     //Enqueue Tether JS and add jQuery Dependency
-    wp_enqueue_script('UndenkTheme-tether-js', get_template_directory_uri() . '/js/tether.min.js', array('jquery'), '1.2.0', false);
+    wp_enqueue_script('MinimaX4-tether-js', get_template_directory_uri() . '/js/tether.min.js', array('jquery'), '1.2.0', false);
 
 	//Enqueue GoldBootstrap JS and add jQuery Dependency
-	wp_enqueue_script('UndenkTheme-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.6', false);
+	wp_enqueue_script('MinimaX4-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.0.0-alpha.6', false);
 
 	//Enqueue MaterialDesign JS and add jQuery Dependency
-	wp_enqueue_script('UndenkTheme-MaterialDesign-js', get_template_directory_uri() . '/js/mdb.min.js', array('jquery'), '4.3.2', true);
+	wp_enqueue_script('MinimaX4-MaterialDesign-js', get_template_directory_uri() . '/js/mdb.min.js', array('jquery'), '4.3.2', true);
 }
 add_action( 'wp_enqueue_scripts', 'MinimaX4_scripts' );
 

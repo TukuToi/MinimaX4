@@ -2,13 +2,13 @@
 
 ## Description
 
-MinimaX4 is the minimalistic version of the MiniMax Theme series. 
-It includes a dynamic integration of Toolset Plugins. It integrates Bootstrap. 
+MinimaX4 is MinimaX Theme with Material Design and Bootstrap 4. 
+It includes a dynamic integration of Toolset Plugins. It integrates Bootstrap 4 (alpha). 
 The rest is free to customize.
 
 ## Current Version
 
-Version: 1.0.2.
+Version: 1.0.0.
 
 ## Usage
 

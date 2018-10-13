@@ -1,9 +1,12 @@
 # MinimaX4
 
-## Description
+## This Theme needs edits and adjustements to run safely.
 
 MinimaX4 is an experiemntal (and old) Theme with Material Design (MDB PRO, running BS4 alpha)
 Note that several things do not work anymore as back then, that why for example, menu in header.php is already commented out (it's broken)
+
+Additonally, the first thing to do would be to replace all outdated scripts (both MDB and BS) to latest versions, not only for usage reasons but also security reasons.
+
 
 ## Current Version
 

@@ -2,9 +2,8 @@
 
 ## Description
 
-MinimaX4 is MinimaX Theme with Material Design and Bootstrap 4. 
-It includes a dynamic integration of Toolset Plugins. It integrates Bootstrap 4 (alpha). 
-The rest is free to customize.
+MinimaX4 is an experiemntal (and old) Theme with Material Design (MDB PRO, running BS4 alpha)
+Note that several things do not work anymore as back then, that why for example, menu in header.php is already commented out (it's broken)
 
 ## Current Version
 
@@ -14,3 +13,5 @@ Version: 1.0.0.
 
 Download and unzip to your FTP.
 Activate in WordPress > Themes.
+Disable Bootstrap loading by Toolset and choose "The theme or another plugin is already loading Bootstrap 3.0"
+==> Note, sideeffects may appear since Toolset isn't BS4+ ready to 100%.

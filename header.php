@@ -68,5 +68,6 @@
          *
          * @link https://developer.wordpress.org/reference/functions/get_template_part/
          */
-        get_template_part( 'bootstrap-nav'); ?> 
+        //This is broken, need to review
+        //get_template_part( 'bootstrap-nav'); ?> 
         

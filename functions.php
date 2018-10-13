@@ -177,5 +177,5 @@ add_action( 'wp_enqueue_scripts', 'MinimaX4_scripts' );
  * @since MinimaX4 1.0.0
  */
 function MinimaX4_require_once($MinimaX4_class) {
-    require_once(__DIR__ . '/' .'MinimaX4-classes' . '/' . $MinimaX4_class . '.class.php');
+    require_once(__DIR__ . '/' .'MinimaX1-classes' . '/' . $MinimaX4_class . '.class.php');
 }
